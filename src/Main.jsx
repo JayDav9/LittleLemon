@@ -1,7 +1,7 @@
 import { useReducer } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
-import { HomePage, BookingPage, ConfirmationPage } from './Pages'
+import { HomePage, BookingPage, ConfirmationPage, Reviews } from './Pages'
 
 import { ACTION_TYPES } from './constants'
 // temp
@@ -58,6 +58,9 @@ export const Main = () => {
 							submitForm={submitForm}
 						/>
 					}></Route>
+
+					<Route path = "/reviews"
+					element = {<Reviews />} />
 				<Route path="/confirmation" element={<ConfirmationPage />} />
 			</Routes>
 		</main>
